@@ -1,0 +1,16 @@
+.header {
+     flex: auto;
+     font-size: large;
+     text-align: center;
+     padding-top: 60px;
+}
+
+#lists-container {
+     font-size: large;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     gap: 50px;
+     padding-top: 20px;
+     justify-content: space-around;
+}

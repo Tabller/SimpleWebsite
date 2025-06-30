@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="index.css">
+     <title>Webpage</title>
+</head>
+
+<body>
+     <header>
+          <div class="header">Welcome to my simple website</div>
+     </header>
+     <div id="lists-container"></div>
+     <script>
+          const InfoBlocks = [
+               {
+                    title: "My Socials",
+                    items: [{ text: "My Discord Username: tabller", link: "" }, { text: "Twitch", link: "https://www.twitch.tv/mrtomit" }, { text: "Boosty", link: "https://boosty.to/mrtomit" }],
+                    color: "red",
+                    marker: true
+               },
+               {
+                    title: "My Projects",
+                    items: [{ text: "DimaBot", link: "https://github.com/Tabller/DimaBot" }, { text: "NeiroRer", link: "" }],
+                    marker: true
+               },
+               {
+                    title: "My Friends' Websites",
+                    items: [{ text: "None yet :(", link: "" }]
+               }
+          ];
+
+          const container = document.getElementById("lists-container");
+
+          InfoBlocks.forEach(list => {
+               const ul = document.createElement("ul")
+
+               ul.style.color = list.color;
+               ul.style.listStylePosition = "inside";
+               ul.style.textAlign = "left";
+
+               if (list.title) {
+                    const titleItem = document.createElement("li");
+                    titleItem.style.listStyleType = "none";
+                    titleItem.textContent = list.title;
+                    titleItem.style.fontWeight = "bold";
+                    ul.appendChild(titleItem);
+               }
+
+
+               list.items.forEach(item => {
+                    const li = document.createElement("li")
+                    if (item.link) {
+                         const link = document.createElement("a")
+                         link.href = item.link;
+                         link.textContent = item.text;
+                         li.append(link);
+                    } else {
+                         li.textContent = item.text
+                    }
+                    if (list.marker) {
+                         li.style.listStylePosition = "inside";
+                    } else {
+                         li.style.listStyleType = "none";
+                    }
+                    ul.appendChild(li);
+               });
+
+               container.appendChild(ul);
+          });
+     </script>
+
+     <footer>
+          <div class="footer"></div>
+     </footer>
+</body>
+
+</html>
