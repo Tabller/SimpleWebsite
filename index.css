@@ -2,7 +2,38 @@
      flex: auto;
      font-size: large;
      text-align: center;
-     padding-top: 60px;
+     padding-top: 20px;
+}
+
+
+div.navbar ul {
+     margin: 0;
+     padding: 0;
+     list-style-type: none;
+     overflow: hidden;
+     background-color: bisque;
+}
+
+div.navbar li {
+     float: left;
+     border-right: 1px solid #ffffff;
+}
+
+div.navbar li:last-child {
+     border-right: none;
+}
+
+div.navbar a {
+     display: block;
+     padding: 8px;
+     color: rgb(255, 255, 255);
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+}
+
+div.navbar .active {
+     background-color: #ffcd8f;
 }
 
 #lists-container {
