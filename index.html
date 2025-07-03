@@ -29,7 +29,7 @@
                },
                {
                     title: "My Projects",
-                    items: [{ text: "DimaBot", link: "https://github.com/Tabller/DimaBot" }, { text: "NeiroRer", link: "" }],
+                    items: [{ text: "DimaBot", link: "https://github.com/Tabller/DimaBot" }, { text: "NeiroRer", link: "" }, { text: "Doodle_mod", link: "https://github.com/Tabller/Doodle_mod" }],
                     marker: true
                },
                {
@@ -58,6 +58,7 @@
 
                list.items.forEach(item => {
                     const li = document.createElement("li")
+                    li.className = "card";
                     if (item.link) {
                          const link = document.createElement("a")
                          link.href = item.link;

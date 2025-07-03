@@ -5,6 +5,7 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" href="gallery.css">
      <title>Cool Gallery</title>
 </head>
 
@@ -17,9 +18,40 @@
                </ul>
           </div>
      </header>
-     <div class="gallery">
+     <div id="gallery">
      </div>
      <script>
+          const gallery = document.getElementById("gallery");
+          const images = [
+               { target: "#", imgsrc: "cool_gallery/1.webp", desc: "что за пипец", alt: "Мем где я неудачно протестировал новый апдейт бота (звук смеха)" },
+               { target: "#", imgsrc: "cool_gallery/amongyou.webp", desc: "это амогус которого я нарисовал для игры в роблоксе", alt: "амогус" }
+          ]
+
+          images.forEach(image => {
+               const picture = document.createElement("div")
+               picture.className = "photo";
+               const a = document.createElement("a");
+               a.target = image.target;
+               a.href = image.imgsrc;
+
+               const img = document.createElement("img");
+               img.src = image.imgsrc;
+
+               a.append(img)
+               picture.append(a);
+
+
+               const imgdiv = document.createElement("div");
+               imgdiv.className = "description";
+               imgdiv.textContent = image.desc;
+
+               picture.append(imgdiv)
+               gallery.appendChild(picture);
+
+
+          });
+
+
      </script>
 </body>
 
