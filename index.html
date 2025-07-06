@@ -60,6 +60,7 @@
                list.items.forEach(item => {
                     const li = document.createElement("li")
                     li.className = "card";
+                    li.style.width = "fit-content";
                     if (item.link) {
                          const link = document.createElement("a")
                          link.href = item.link;
