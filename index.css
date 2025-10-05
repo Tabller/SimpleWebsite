@@ -5,6 +5,9 @@
      padding-top: 20px;
 }
 
+a:hover {
+     background-color: antiquewhite;
+}
 
 div.navbar ul {
      margin: 0;
@@ -44,6 +47,14 @@ div.navbar .active {
      gap: 50px;
      padding-top: 20px;
      justify-content: space-around;
+}
+
+.box {
+     border-radius: 25px;
+     background-color: #e5d899;
+     align-content: space-around;
+     padding: 20px;
+     box-sizing: border-box;
 }
 
 .card .tooltiptext {
